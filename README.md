@@ -1,6 +1,6 @@
 # TPDF
 
-> *"Every page has its place."*  
+> _"Every page has its place."_  
 > A thoughtful space for your everyday document needs.
 
 TPDF is a minimal, editorial, and privacy-oriented PDF utility platform engineered for reliable document management without ads, paywalls, or privacy trade-offs.
@@ -51,44 +51,3 @@ TPDF delivers eight essential document operations:
 - **Compression & Packaging:** `jszip`
 
 ---
-
-## ✦ Getting Started
-
-### Prerequisites
-
-- Node.js `18.x` or `20.x`+
-- npm, yarn, or pnpm
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/tpdf.git
-
-# Navigate to project directory
-cd tpdf
-
-# Install dependencies
-npm install
-```
-
-### Running Locally
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
-
-### Building for Production
-
-```bash
-npm run build
-npm start
-```
-
----
-
-## ✦ License
-
-Distributed under the MIT License. See `LICENSE` for details.
