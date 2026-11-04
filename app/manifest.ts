@@ -39,5 +39,28 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: "maskable",
       },
     ],
+    screenshots: [
+      {
+        src: "/ScreenShot/S1.png",
+        sizes: "720x333",
+        type: "image/png",
+        form_factor: "wide",
+        label: "TPDF Document Hub",
+      },
+      {
+        src: "/ScreenShot/S2.png",
+        sizes: "938x477",
+        type: "image/png",
+        form_factor: "wide",
+        label: "Explore PDF Utilities",
+      },
+      {
+        src: "/ScreenShot/S3.png",
+        sizes: "939x494",
+        type: "image/png",
+        form_factor: "wide",
+        label: "Secure Document Operations",
+      },
+    ],
   };
 }
