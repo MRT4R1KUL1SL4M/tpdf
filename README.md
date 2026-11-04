@@ -1,9 +1,15 @@
 # TPDF
 
-> _"Every page has its place."_  
+> *"Every page has its place."*  
 > A thoughtful space for your everyday document needs.
 
+[![Live Demo](https://img.shields.io/badge/Live_Web_App-tpdf--jade.vercel.app-B78360?style=for-the-badge)](https://tpdf-jade.vercel.app/)
+[![Download Android APK](https://img.shields.io/badge/Download_APK-v1.0.0_Release-292722?style=for-the-badge&logo=android&logoColor=white)](https://github.com/MRT4R1KUL1SL4M/tpdf/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-685447?style=for-the-badge)](LICENSE)
+
 TPDF is a minimal, editorial, and privacy-oriented PDF utility platform engineered for reliable document management without ads, paywalls, or privacy trade-offs.
+
+📱 **Android App:** You can download the latest official `.apk` release directly from [GitHub Releases](https://github.com/MRT4R1KUL1SL4M/tpdf/releases/latest).
 
 ---
 
@@ -51,3 +57,44 @@ TPDF delivers eight essential document operations:
 - **Compression & Packaging:** `jszip`
 
 ---
+
+## ✦ Getting Started
+
+### Prerequisites
+
+- Node.js `18.x` or `20.x`+
+- npm, yarn, or pnpm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/MRT4R1KUL1SL4M/tpdf.git
+
+# Navigate to project directory
+cd tpdf
+
+# Install dependencies
+npm install
+```
+
+### Running Locally
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+### Building for Production
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## ✦ License
+
+Distributed under the MIT License. See `LICENSE` for details.

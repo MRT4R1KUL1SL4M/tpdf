@@ -50,6 +50,16 @@ export default function Footer() {
                     Organize PDF
                   </Link>
                 </li>
+                <li>
+                  <a
+                    href="https://github.com/MRT4R1KUL1SL4M/tpdf/releases/latest"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#B78360] font-medium hover:text-[#A06F4D] transition-colors inline-flex items-center gap-1"
+                  >
+                    <span>Android App (.apk)</span>
+                  </a>
+                </li>
               </ul>
             </div>
 
