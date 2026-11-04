@@ -1,12 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { ChevronRight, ArrowRight, ShieldCheck, HeartHandshake, Sparkles } from "lucide-react";
+import { ChevronRight, ArrowUpRight, ShieldCheck, Layers, Cpu } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 
 export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-      {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-[#81786E] mb-8">
         <Link href="/" className="hover:text-[#292722] transition-colors">
           Home
@@ -15,10 +14,9 @@ export default function AboutPage() {
         <span className="text-[#292722] font-medium">About</span>
       </nav>
 
-      {/* Editorial Header */}
       <header className="space-y-4 mb-16">
         <span className="text-xs font-semibold tracking-wider uppercase text-[#B78360]">
-          Our Craft & Philosophy
+          Corporate Overview
         </span>
         <h1 className="font-serif-brand text-4xl sm:text-5xl md:text-6xl text-[#292722] leading-tight">
           &ldquo;{BRAND.tagline}&rdquo;
@@ -28,42 +26,53 @@ export default function AboutPage() {
         </p>
       </header>
 
-      {/* Narrative Section */}
       <div className="space-y-12 text-[#292722] text-sm sm:text-base leading-relaxed border-t border-[#E9E3DA] pt-12">
         <section className="space-y-4">
           <h2 className="font-serif-brand text-2xl text-[#292722]">
-            Why TPDF Exists
+            Mission and Standards
           </h2>
           <p className="text-[#81786E]">
-            Modern document tools are too frequently cluttered with intrusive advertisements, deceptive download buttons, and dark patterns that harvest your sensitive data.
+            Modern digital workspaces require reliable, secure, and respectful document utilities. Many traditional web tools compromise user confidentiality through intrusive advertising networks, permanent file retention, and dark conversion patterns.
           </p>
           <p className="text-[#81786E]">
-            TPDF was created as a quiet, respectful alternative. We believe that everyday utilities should feel like well-crafted physical stationery — durable, honest, and free of unnecessary friction.
+            TPDF provides an independent, focused document engineering environment. We treat every document with institutional dignity, pairing meticulous typography with client-side computation to ensure that your files remain strictly under your control.
           </p>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
           <div className="bg-white border border-[#E9E3DA] p-6 rounded-xl space-y-3">
-            <div className="w-9 h-9 rounded-lg bg-[#EAE3D8] text-[#685447] flex items-center justify-center">
-              <ShieldCheck className="w-5 h-5 stroke-[1.8]" />
+            <div className="w-10 h-10 rounded-lg bg-[#EAE3D8] text-[#685447] flex items-center justify-center">
+              <Cpu className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 className="font-semibold text-base text-[#292722]">
-              Private by Architecture
+              Local Execution
             </h3>
             <p className="text-xs sm:text-sm text-[#81786E] leading-relaxed">
-              We process operations client-side whenever technically possible. When server-side processing is necessary, documents reside solely in volatile memory and are cleaned immediately.
+              Document restructuring, merging, splitting, and cryptographic operations run locally inside your web browser memory.
             </p>
           </div>
 
           <div className="bg-white border border-[#E9E3DA] p-6 rounded-xl space-y-3">
-            <div className="w-9 h-9 rounded-lg bg-[#EAE3D8] text-[#685447] flex items-center justify-center">
-              <HeartHandshake className="w-5 h-5 stroke-[1.8]" />
+            <div className="w-10 h-10 rounded-lg bg-[#EAE3D8] text-[#685447] flex items-center justify-center">
+              <ShieldCheck className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 className="font-semibold text-base text-[#292722]">
-              Eight Essential Tools
+              Zero Data Retention
             </h3>
             <p className="text-xs sm:text-sm text-[#81786E] leading-relaxed">
-              We do not chase feature bloat. We focus exclusively on the eight operations people perform every single day: merge, split, compress, convert, image conversion, organize, lock, and unlock.
+              When server-level conversion is requested, documents are processed exclusively in volatile memory and purged immediately after completion.
+            </p>
+          </div>
+
+          <div className="bg-white border border-[#E9E3DA] p-6 rounded-xl space-y-3">
+            <div className="w-10 h-10 rounded-lg bg-[#EAE3D8] text-[#685447] flex items-center justify-center">
+              <Layers className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <h3 className="font-semibold text-base text-[#292722]">
+              Focused Toolkit
+            </h3>
+            <p className="text-xs sm:text-sm text-[#81786E] leading-relaxed">
+              We specialize in eight foundational document utilities, engineered with precision, reliability, and typographic elegance.
             </p>
           </div>
         </section>
@@ -73,15 +82,15 @@ export default function AboutPage() {
             Ready to organize your documents?
           </h3>
           <p className="text-xs sm:text-sm text-[#81786E] max-w-xl">
-            Explore the complete toolkit and experience document management designed with dignity.
+            Explore the complete suite of eight utilities designed for seamless document workflows.
           </p>
           <div className="pt-2">
             <Link
               href="/tools"
               className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider bg-[#292722] text-[#F7F4EE] px-5 py-2.5 rounded-md hover:bg-[#685447] transition-colors"
             >
-              <span>Explore tools</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>Explore All Tools</span>
+              <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>
         </section>
@@ -89,4 +98,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

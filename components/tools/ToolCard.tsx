@@ -9,7 +9,7 @@ import {
   Layers,
   Lock,
   Unlock,
-  ArrowRight,
+  ArrowUpRight,
 } from "lucide-react";
 import { ToolItem } from "@/lib/constants";
 
@@ -34,10 +34,10 @@ export default function ToolCard({ tool }: ToolCardProps) {
   return (
     <Link
       href={tool.href}
-      className="group flex flex-col justify-between bg-white border border-[#E9E3DA] p-6 rounded-xl transition-all duration-200 hover:border-[#B78360]/50 hover:-translate-y-0.5 hover:shadow-xs"
+      className="group flex flex-col justify-between bg-white border border-[#E9E3DA] p-6 rounded-xl transition-all duration-300 hover:border-[#B78360]/60 hover:-translate-y-1 hover:shadow-xs cursor-pointer"
     >
       <div className="space-y-4">
-        <div className="w-11 h-11 rounded-lg bg-[#EAE3D8]/80 text-[#685447] flex items-center justify-center transition-colors group-hover:bg-[#B78360] group-hover:text-white">
+        <div className="w-11 h-11 rounded-lg bg-[#EAE3D8]/80 text-[#685447] flex items-center justify-center transition-all duration-300 group-hover:bg-[#B78360] group-hover:text-white group-hover:scale-105">
           <IconComponent className="w-5 h-5 stroke-[1.8]" />
         </div>
 
@@ -51,11 +51,14 @@ export default function ToolCard({ tool }: ToolCardProps) {
         </div>
       </div>
 
-      <div className="pt-6 flex items-center text-xs font-medium text-[#B78360] group-hover:text-[#A06F4D]">
-        <span>Open tool</span>
-        <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform duration-200 group-hover:translate-x-1" />
+      <div className="pt-6 mt-4 border-t border-[#E9E3DA]/60 flex items-center justify-between">
+        <span className="text-xs font-semibold tracking-wide text-[#685447] group-hover:text-[#292722] transition-colors">
+          Open Tool
+        </span>
+        <div className="w-8 h-8 rounded-full border border-[#E9E3DA] bg-[#F7F4EE] flex items-center justify-center text-[#685447] transition-all duration-300 group-hover:bg-[#B78360] group-hover:border-[#B78360] group-hover:text-white group-hover:scale-105 group-hover:shadow-xs">
+          <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </div>
       </div>
     </Link>
   );
 }
-

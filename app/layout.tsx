@@ -31,8 +31,13 @@ export const metadata: Metadata = {
   description: "A thoughtful space for your everyday document needs.",
   manifest: "/manifest.json",
   icons: {
-    icon: "/icon.svg",
-    apple: "/icons/apple-touch-icon.png",
+    icon: [
+      { url: "/icons/tpdf-favicon-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/icons/tpdf-icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/icons/tpdf-icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
   },
   appleWebApp: {
     capable: true,

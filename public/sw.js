@@ -1,10 +1,12 @@
 // TPDF Service Worker for Offline Resilience and PWA Compliance
-const CACHE_NAME = "tpdf-cache-v1";
+const CACHE_NAME = "tpdf-cache-v2";
 const ASSETS_TO_CACHE = [
   "/",
   "/manifest.json",
-  "/icons/icon-192.png",
-  "/icons/icon-512.png",
+  "/icons/tpdf-favicon-64.png",
+  "/icons/tpdf-icon-192.png",
+  "/icons/tpdf-icon-512.png",
+  "/icons/tpdf-icon.svg",
   "/pdf.worker.min.mjs",
 ];
 
@@ -35,12 +37,10 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  // Pass non-GET requests (like POST /api/convert) directly to network
   if (event.request.method !== "GET") {
     return;
   }
 
-  // Stale-while-revalidate for static assets, network-first for pages
   event.respondWith(
     fetch(event.request)
       .then((networkResponse) => {
@@ -64,4 +64,3 @@ self.addEventListener("fetch", (event) => {
       })
   );
 });
-
