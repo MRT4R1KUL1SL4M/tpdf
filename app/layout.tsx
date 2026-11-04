@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ServiceWorkerRegister from "@/components/layout/ServiceWorkerRegister";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -18,11 +19,25 @@ const instrumentSerif = Instrument_Serif({
   weight: ["400"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#B78360",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
   title: "TPDF — Every page has its place.",
   description: "A thoughtful space for your everyday document needs.",
+  manifest: "/manifest.json",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.svg",
+    apple: "/icons/apple-touch-icon.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "TPDF",
   },
 };
 
@@ -40,6 +55,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );

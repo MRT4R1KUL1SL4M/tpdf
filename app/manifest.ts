@@ -1,0 +1,30 @@
+import type { MetadataRoute } from "next";
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: "TPDF — Every page has its place",
+    short_name: "TPDF",
+    description: "A thoughtful space for your everyday document needs.",
+    start_url: "/",
+    display: "standalone",
+    background_color: "#F7F4EE",
+    theme_color: "#B78360",
+    orientation: "portrait",
+    categories: ["productivity", "utilities"],
+    icons: [
+      {
+        src: "/icons/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+        purpose: "maskable",
+      },
+      {
+        src: "/icons/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
+      },
+    ],
+  };
+}
+
